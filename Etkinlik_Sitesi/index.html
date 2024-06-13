@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); 
+    width: 100%; 
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: rgb(244, 250, 67) !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">
+        <img src="image/logo1.png" alt="Logo" style="height: 150px; width: auto;">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">AnaSayfa</a></li>
+        <li><a href="#band">Çok Yakında</a></li>
+        <li><a href="#tour">En Yakın Etkinlik</a></li>
+        <li><a href="#contact">İletişim</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Daha Fazla
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">İndirimli Bilet</a></li>
+            <li><a href="#">Çekiliş</a></li>
+            <li><a href="#">İmzalı T-shirt</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+   
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="image/semicenk3.webp" alt="İstanbul" style="width: 1950px; height: 800px; object-fit: cover;">
+        <div class="carousel-caption">
+          <h3>İstanbul</h3>
+          <p>Wolkswagen Arena</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="image/sagopakajmer.jpg" alt="Ankara" style="width: 1950px; height: 800px; object-fit: cover;">
+        <div class="carousel-caption">
+          <h3>Ankara</h3>
+          <p>Jolly Joker Ankara</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="image/hayko-cepkin.jpeg" alt="İzmir" style="width: 1950px; height: 800px; object-fit: cover;">
+        <div class="carousel-caption">
+          <h3>İzmir</h3>
+          <p>Efes Antik Tiyatro</p>
+        </div>      
+      </div>
+    </div>
+
+    
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div id="band" class="container text-center">
+  <h3>ÇOK YAKINDA </h3>
+  <p><em>Dünyaca Ünlü Sanatçılar </em></p>
+  <p>Sanat ve eğlence dünyasına yeni bir soluk getirmek amacıyla yola çıktığımız etkinlik sitemizde,
+     şimdi sizleri dünyanın en büyük yıldızlarıyla buluşturuyoruz! Her biri kendi alanında ikon haline gelmiş,
+      milyonların hayranlıkla takip ettiği ünlü sanatçılar, çok yakında sitemiz aracılığıyla sizlerle buluşacak.
+      Her etkinliğin detayları ve bilet satış tarihleri hakkında güncel bilgilere sitemizden ulaşabilirsiniz.
+       Ayrıca, ön satış fırsatları ve özel indirimlerden yararlanmak için sitemize üye olmayı unutmayın.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Drake</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="image/drake.jpg" class="img-circle person" alt="Random Name" style="width: 255px; height: 255px; object-fit: cover;">
+      </a>
+      <div id="demo" class="collapse">
+        
+        <p> Yer: Beşiktaş Tüpraş Stadyumu</p>
+        <p>Tarih: 29 Ağustos 2025'de</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Eminem</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="image/Eminem.webp" class="img-circle person" alt="Random Name" style="width: 255px; height: 255px; object-fit: cover;">
+      </a>
+      <div id="demo2" class="collapse">
+        
+        <p> Yer: Wolkswagen Arena</p>
+        <p>Tarih: 25 Mayıs 2025</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Billie Eilish</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="image/billie eillish.png" class="img-circle person" alt="Random Name"style="width: 255px; height: 255px; object-fit: cover;">
+      </a>
+      <div id="demo3" class="collapse">
+       
+        <p> Yer: Rams Park</p>
+        <p>Tarih: 17 Temmuz 2025</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">EN YAKIN ETKİNLİK</h3>
+    <p class="text-center">Size en yakın tarihli etkinliği bulup hemen eğlenmeye başlayabilirsiniz.<br> İşte en yakın tarihli etkinliklerimiz !</p>
+    <ul class="list-group">
+      <li class="list-group-item">Cem Yılmaz <span class="label label-danger">Biletler Tükendi!</span></li>
+      <li class="list-group-item">Hasan Can Kaya ile KONUŞANLAR  <span class="label label-danger">Sınırlı Sayıda Bilet!</span></li> 
+      <li class="list-group-item">Doğu Demirkol  <span class="label label-danger">Sınırlı Sayıda Bilet!</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="image/cemyılmaz2.19" alt="Cem Yılmaz"style="width: 400px; height: 300px; object-fit: cover;">
+          <p><strong>Cem Yılmaz</strong></p>
+          <p>Cumartesi 1 Haziran 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Bilet Al</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="image/konuşanlar2.jpg" alt="Hasan Can Kaya" style="width: 400px; height: 300px; object-fit: cover;">
+          <p><strong>Hasan Can Kaya</strong></p>
+          <p>Perşembe 30 Mayıs 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Bilet Al</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="image/doğu_demirkol.jpg" alt="Doğu Demirkol" style="width: 400px; height: 300px; object-fit: cover;">
+          <p><strong>Doğu Demirkol</strong></p>
+          <p>Çarşamba 5 Haziran 2024</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Bilet Al</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="contact" class="container">
+  <h3 class="text-center">İletişim</h3>
+  <p class="text-center"><em>Bize burdan ulaşabilirsiniz !</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Sorununuzu Belirtiniz</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>İstanbul /Avrupa Yakası </p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +90 123 456 78 90</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: tıkbilet@mail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="İsim" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Sorununuz" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">Sitemiz Hakkında </h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Biz Kimiz?</a></li>
+    <li><a data-toggle="tab" href="#menu1">Kurum Politikamız</a></li>
+    <li><a data-toggle="tab" href="#menu2">Bizimle Çalımak İster Misiniz?</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      
+      <p><br>&nbsp Etkinlik dünyasında fark yaratmak için yola çıktık. Sanatın ve eğlencenin sınırlarını zorlayan bir ekip olarak,
+         tutku ve özveriyle çalışıyoruz. Her bir etkinliği unutulmaz kılmak için çabalıyor, size benzersiz deneyimler sunmak için buradayız.
+          Biz, sizin için sanatı yaşatan ve eğlenceyi bir araya getiren bir ekibiz. Hoş geldiniz, biz buradayız. Siz de bu maceraya katılın.
+
+      </p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+     
+      <p><br> &nbsp Müşteri memnuniyeti, etkinliklerimizin merkezindedir. Her zaman en yüksek kalitede deneyimler sunmak için çalışırız.
+
+        Müşterilerimizin beklentilerini aşmak için sürekli çaba sarf ederiz.
+        Herkesin katılımını teşvik eder ve etkinliklerimizi herkes için erişilebilir kılmaya çalışırız.
+        &nbsp Çevreye duyarlı ve sürdürülebilir bir yaklaşımı benimseriz.
+        Topluma geri verme konusunda taahhüdümüzü sürdürür, sosyal sorumluluğumuzu yerine getiririz.
+        Ekip üyelerimizin gelişimi ve refahı bizim için önemlidir.
+        Bu politika doğrultusunda hareket ederek, her zaman en iyi deneyimi sunmaya ve topluma katkı sağlamaya devam edeceğiz.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      
+      <p><br>&nbsp Etkinlik dünyasına yön vermek ve deneyimlerimizi paylaşmak için heyecanlı mısınız? Siz de bizimle çalışarak bu heyecanı paylaşabilir ve birlikte unutulmaz etkinliklere imza atabiliriz.
+
+        Yaratıcı Bir Ekibin Parçası Olun: Bizimle çalışarak, yaratıcı ve dinamik bir ekibin bir parçası olma fırsatını yakalayacaksınız. Her bir etkinliği planlarken ve gerçekleştirirken, kendi fikirlerinizi ve yeteneklerinizi ortaya koyma şansına sahip olacaksınız.
+        
+        <br>&nbsp Deneyimlerinizi Paylaşın: Etkinlik dünyasında deneyiminiz mi var? Ya da yeni başlıyorsunuz ve sektöre adım atmak mı istiyorsunuz? Her durumda da sizinle çalışmak ve deneyimlerinizi paylaşmak için buradayız. Birlikte büyümek ve öğrenmek için fırsatlar sunuyoruz.
+        
+        Yaratıcı Projelerle Kendinizi Geliştirin: Bizimle çalışırken, sadece etkinlik dünyasında değil, aynı zamanda kendinizde de büyüme fırsatı bulacaksınız. Yaratıcı projelerde yer alarak ve yeni beceriler kazanarak, kariyerinizde bir adım öne geçebilirsiniz.
+        
+        Bizimle çalışmak için heyecanlı mısınız? Hemen başvurun ve etkinlik dünyasında yeni bir yolculuğa adım atın!
+        
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<img src="" class="img-responsive" style="width:100%">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+ 
+</footer>
+
+<script>
+$(document).ready(function(){
+  
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    
+    if (this.hash !== "") {
+
+     
+      event.preventDefault();
+
+      
+      var hash = this.hash;
+
+     
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.row text-center {
+    width: 400px; 
+    height: 300px; 
+    object-fit: cover; 
+}
+.navbar-brand {
+    position: absolute;
+    left: 15px;
+}
